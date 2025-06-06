@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  mobile:
+    build: ./apps/mobile
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./apps/mobile:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  web:
+    build: ./apps/web
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./apps/web:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  tv:
+    build: ./apps/tv
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./apps/tv:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  api:
+    build: ./services/api
+    ports:
+      - "3004:3000"
+    volumes:
+      - ./services/api:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  ml:
+    build: ./services/ml
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./services/ml:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  realtime:
+    build: ./services/realtime
+    ports:
+      - "3005:3000"
+    volumes:
+      - ./services/realtime:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  media:
+    build: ./services/media
+    ports:
+      - "3006:3000"
+    volumes:
+      - ./services/media:/usr/src/app
+    environment:
+      - NODE_ENV=development

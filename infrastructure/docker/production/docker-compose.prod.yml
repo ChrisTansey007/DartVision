@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mobile:
+    build: ./apps/mobile
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+
+  web:
+    build: ./apps/web
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=production
+
+  tv:
+    build: ./apps/tv
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
+
+  api:
+    build: ./services/api
+    ports:
+      - "3004:3000"
+    environment:
+      - NODE_ENV=production
+
+  ml:
+    build: ./services/ml
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+
+  realtime:
+    build: ./services/realtime
+    ports:
+      - "3005:3000"
+    environment:
+      - NODE_ENV=production
+
+  media:
+    build: ./services/media
+    ports:
+      - "3006:3000"
+    environment:
+      - NODE_ENV=production

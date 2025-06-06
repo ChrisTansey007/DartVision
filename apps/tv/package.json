@@ -1,0 +1,16 @@
+{
+  "name": "tv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "typescript": "4.4.4",
+    "@types/node": "16.11.7"
+  }
+}
